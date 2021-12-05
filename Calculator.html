@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Simple interest calculator</title>
+        <script>
+            function calculate()
+            {
+                p = document.getElementById("p").value;
+                t = document.getElementById("t").value;
+                r = document.getElementById("r").value;
+                result = document.getElementById("result");
+                
+                result.innerHTML = "The interest is " + (p*t*r/100);
+               
+            }
+            function resetcalculator()
+            {
+                classid=document.getElementsByClassName("n");
+               for(let i=0; i<classid.length; i++)
+               {classid[i].value=""}
+                //result = document.getElementById("result");
+                
+                result.innerHTML = "";
+            }
+         </script>
+       
+        <style>
+            .text{
+                text-align: center;
+                color: crimson;
+                font-size: 40px;
+                
+                
+                padding: 0pc;
+            }
+            #first-section{
+                color: darkgreen;
+                font-size: 30px;
+                
+                margin-bottom: 0pc;
+                position: relative;
+                background-color: black;
+                width: 50%;
+                border: 10px dotted green;
+
+
+               
+                
+                
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+    <div id="first-section" class="text">
+        <h1 class="text">Simple interest calculator</h1>
+        <p>Principal Amount : <input id="p" class="n" type="text" placeholder="012"></p>
+        <p>Rate : <input id="r" class="n" type="text"  placeholder="012"></p>
+        <p>Time : <input id="t" class="n" type="text" placeholder="012"></p>
+        
+        <button onclick=calculate()>calculate</button>
+        <button onclick=resetcalculator()>Reset</button>
+
+        <p id="result"></p>
+    </div>
+
+    </body>
+</html>
